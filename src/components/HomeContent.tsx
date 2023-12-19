@@ -1,4 +1,5 @@
 import Card from "./Card";
+import Footer from "./Footer";
 
 const HomeContent = () => {
   const data = [
@@ -37,6 +38,7 @@ const HomeContent = () => {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

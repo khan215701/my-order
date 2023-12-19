@@ -11145,7 +11145,7 @@ body {
   width: 100%;
 }
 .content-page {
-background-color:var(--ct-body-bg);
+  background-color: var(--ct-body-bg);
 }
 .content-page {
   margin-left: 240px;
@@ -12591,6 +12591,7 @@ body[data-layout-color="dark"] .page-title-box .page-title {
   color: #f7f7f7;
 }
 .footer {
+  margin-left: 10px;
   bottom: 0;
   padding: 19px 15px 20px;
   position: absolute;
