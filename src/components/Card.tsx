@@ -1,5 +1,6 @@
 import React from "react";
 import ProgressCircle from "./ProgressCircle";
+import DotMenu from "./DotMenu";
 
 interface Data {
   topic: string;
@@ -17,6 +18,9 @@ const Card = ({ data }: Props) => {
         <div className="col-xl-3 col-md-6">
           <div className="card">
             <div className="card-body">
+              <div className="dropdown float-end">
+                <DotMenu />
+              </div>
               <h4 className="header-title mt-0 mb-4">
                 <strong>{data.topic}</strong>
               </h4>
