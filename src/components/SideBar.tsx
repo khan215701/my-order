@@ -77,6 +77,11 @@ export const SideBar: React.FC = () => {
   const [hasImage, setHasImage] = React.useState(false);
   const [theme, setTheme] = React.useState<Theme>("light");
 
+  // handle on RTL change event
+  const handleRTLChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setRtl(e.target.checked);
+  };
+
   const menuItemStyles: MenuItemStyles = {
     root: {
       fontSize: "13px",
@@ -120,13 +125,20 @@ export const SideBar: React.FC = () => {
   return (
     <div className="left-side-menu">
       <div className="h-100" data-simplebar>
-        <div>
+        <div
+          style={{
+            display: "flex",
+            height: "100%",
+            direction: rtl ? "rtl" : "ltr",
+          }}
+        >
           <Sidebar
             collapsed={collapsed}
             toggled={toggled}
             onBackdropClick={() => setToggled(false)}
             onBreakPoint={setBroken}
             image=""
+            rtl={rtl}
             breakPoint="md"
             backgroundColor={hexToRgba(
               themes[theme].sidebar.backgroundColor,
