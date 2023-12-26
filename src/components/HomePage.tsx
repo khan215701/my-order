@@ -1,6 +1,6 @@
-import HomeContent from "../HomeContent";
-import NavBar from "../NavBar";
-import { SideBar } from "../SideBar";
+import HomeContent from "./HomeContent";
+import NavBar from "./NavBar";
+import { SideBar } from "./SideBar";
 
 const HomePage = () => {
   return (

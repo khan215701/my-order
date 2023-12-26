@@ -2,11 +2,12 @@ import * as React from "react";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { Link } from "react-router-dom";
 
 const settings = [
-  { label: "My Account", icon: "fe-user" },
-  { label: "Lock Screen", icon: "fe-lock" },
-  { label: "Logout", icon: "fe-log-out" },
+  { label: "My Account", icon: "fe-user", link: "/my-account" },
+  { label: "Lock Screen", icon: "fe-lock", link: "/auth-lock" },
+  { label: "Logout", icon: "fe-log-out", link: "/auth-logout" },
 ];
 
 function ResponsiveAppBar() {
@@ -59,7 +60,7 @@ function ResponsiveAppBar() {
         onClose={handleCloseUserMenu}
       >
         {settings.map((setting) => (
-          <a href="contacts-profile.html" className="dropdown-item notify-item">
+          <Link to={setting.link} className="dropdown-item notify-item">
             <MenuItem key={setting.label} onClick={handleCloseUserMenu}>
               <i className={setting.icon}></i>
               <span>
@@ -68,7 +69,7 @@ function ResponsiveAppBar() {
                 </Typography>
               </span>
             </MenuItem>
-          </a>
+          </Link>
         ))}
       </Menu>
     </li>

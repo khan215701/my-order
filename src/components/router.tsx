@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import AuthRegister from "./AuthRegister";
+import HomePage from "./HomePage";
+import AuthRegister from "./auth/AuthRegister";
+import AuthLogin from "./auth/AuthLogin";
+import AuthLogout from "./auth/AuthLogout";
+import AuthLock from "./auth/AuthLock";
 
 const router = createBrowserRouter([
   /* home page */
@@ -8,6 +11,9 @@ const router = createBrowserRouter([
 
   /* auth pages*/
   { path: "/auth-register", element: <AuthRegister /> },
+  { path: "/auth-login", element: <AuthLogin /> },
+  { path: "/auth-logout", element: <AuthLogout /> },
+  { path: "/auth-lock", element: <AuthLock /> },
 ]);
 
 export default router;
