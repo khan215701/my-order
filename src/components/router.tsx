@@ -4,6 +4,7 @@ import AuthRegister from "./auth/AuthRegister";
 import AuthLogin from "./auth/AuthLogin";
 import AuthLogout from "./auth/AuthLogout";
 import AuthLock from "./auth/AuthLock";
+import AuthResetPassword from "./auth/AuthResetPassword";
 
 const router = createBrowserRouter([
   /* home page */
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
   { path: "/auth-login", element: <AuthLogin /> },
   { path: "/auth-logout", element: <AuthLogout /> },
   { path: "/auth-lock", element: <AuthLock /> },
+  { path: "/auth-reset", element: <AuthResetPassword /> },
 ]);
 
 export default router;

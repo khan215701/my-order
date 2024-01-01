@@ -3,6 +3,7 @@ import FormControl from "@mui/material/FormControl";
 import { IconButton } from "@mui/material";
 import Fingerprint from "@mui/icons-material/Fingerprint";
 import Password from "../Password";
+import AuthHeader from "./AuthHeader";
 
 const AuthLock = () => {
   return (
@@ -12,19 +13,7 @@ const AuthLock = () => {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-md-8 col-lg-6 col-xl-4">
-                <div className="text-center">
-                  <Link to="/">
-                    <img
-                      src="/src/assets/images/logo-dark.png"
-                      alt=""
-                      height="22"
-                      className="mx-auto"
-                    />
-                  </Link>
-                  <p className="text-muted mt-2 mb-4">
-                    Responsive Admin Dashboard
-                  </p>
-                </div>
+                <AuthHeader />
                 <div className="card">
                   <div className="card-body p-4">
                     <div className="text-center mb-4">
